@@ -1,3 +1,27 @@
+项目说明：
+
+实现方式1
+
+sso-client-base-project-maste： 单点登录客户端服务器1
+
+sso-client-base-project2-maste：单点登录客户端服务器2
+
+sso-server-base-project-maste：单点登录服务器
+
+
+
+实现方式2：springboot 改写
+
+sso-client
+
+sso-client-2
+
+sso-server
+
+
+
+
+
 > - ## 三、环境要求
 >
 > - JDK1.7+
