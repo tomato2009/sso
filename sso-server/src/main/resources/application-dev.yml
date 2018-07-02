@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.4.202:12345/kmsp_saas?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: bochtec@2018
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat,wall,log4j
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    druid:
+      filter:
+        slf4j:
+          enabled: true
+          statement-create-after-log-enabled: false
+          statement-close-after-log-enabled: false
+          result-set-open-after-log-enabled: false
+          result-set-close-after-log-enabled: false
+# # main:
+#   # banner-mode: "off"
+  mvc:
+   static-path-pattern: /static/**
+#  redis:
+#    database: 0
+#    host: 192.168.4.202
+#    port: 12346    #连接超时时间
+#    jedis:
+#      pool:
+#         max-active: 8  #最大连接数
+#         max-wait: -1   #最大阻塞等待时间(负数表示没限制)
+#         max-idle: 8    #最大空闲
+#         min-idle: 0   #最小空闲
+#         timeout: 10000
+
+
+#  thymeleaf:
+#    prefix: classpath:/templates/
+server:
+  port: 8443
+#  servlet:
+#   context-path: /saas
+logging:
+  config: classpath:logback-spring.xml
+
+
+
+
+
